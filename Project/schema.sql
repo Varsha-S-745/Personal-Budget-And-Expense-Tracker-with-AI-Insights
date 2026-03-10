@@ -1,6 +1,4 @@
--- SQLite schema for budget tracker
 PRAGMA foreign_keys = ON;
-
 CREATE TABLE IF NOT EXISTS transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     date TEXT NOT NULL,
@@ -9,8 +7,6 @@ CREATE TABLE IF NOT EXISTS transactions (
     category TEXT NOT NULL,
     note TEXT
 );
-
--- Some starter data (optional). Comment out if not needed.
 INSERT INTO transactions (date, amount, type, category, note) VALUES
 (date('now','start of month','-2 months','+5 days'), 1200, 'expense', 'Groceries', 'monthly groceries'),
 (date('now','start of month','-2 months','+10 days'), 300, 'expense', 'Transport', 'fuel'),
